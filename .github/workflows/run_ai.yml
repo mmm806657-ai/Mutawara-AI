@@ -1,0 +1,18 @@
+name: Run Mutawara AI
+on: [push] # يشتغل الكود كل ما تعدل حاجة
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install google-cloud-speech
+      - name: Run Mutawara
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }} # هنا بنفتح الخزنة للكود!
+        run: python main.py
