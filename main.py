@@ -1,11 +1,13 @@
-# Mutawara AI - The Advanced Version
-# Founder: Ahmed (The Seven Worlds Empire)
+import os
+# استدعاء مفتاح الأمان من خزنة جيثب
+api_key = os.getenv('GOOGLE_API_KEY')
 
-def mutawara_init():
-    print("🛡️ Mutawara AI is now Online...")
-    print("Connecting to Google Cloud Infrastructure...")
-    print("Status: Sovereign Command Protocol Active.")
+def start_mutawara():
+    if api_key:
+        print("✅ تم تفعيل الربط السيادي مع Google Cloud")
+        print("🛡️ نظام 'المطورة' جاهز لخدمة المهاجرين والسياح")
+    else:
+        print("⚠️ خطأ: لم يتم العثور على مفتاح التشغيل")
 
 if __name__ == "__main__":
-    mutawara_init()
-  
+    start_mutawara()
