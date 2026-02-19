@@ -1,16 +1,16 @@
 import os
 
-# بنسحب المفتاح من خزنة جيثب
+# سحب المفتاح من الخزنة
 api_key = os.getenv('GOOGLE_API_KEY')
 
-def start_mutawara():
-    print("--- نظام المطورة للذكاء الاصطناعي ---")
+def start():
+    print("--- Mutawara AI System ---")
     if api_key:
-        # بنظهر أول 4 حروف بس للأمان عشان نتأكد إنه شغال
-        print(f"✅ تم الاتصال بنجاح! المفتاح يبدأ بـ: {api_key[:4]}...")
-        print("🛡️ الإمبراطورية الآن متصلة بسحابة جوجل.")
+        # بنطبع أول 4 حروف للتأكد
+        start_key = str(api_key)[:4]
+        print(f"Connection Successful! Key starts with: {start_key}")
     else:
-        print("⚠️ فشل: المفتاح السري غير موجود في الخزنة.")
+        print("Error: GOOGLE_API_KEY not found in Secrets")
 
 if __name__ == "__main__":
-    start_mutawara()
+    start()
