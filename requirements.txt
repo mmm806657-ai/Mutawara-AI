@@ -1,0 +1,8 @@
+# مكتبات جوجل السحابية لتشغيل الذكاء الاصطناعي والترجمة
+google-cloud-aiplatform
+google-cloud-translate
+google-cloud-speech
+google-cloud-text-to-speech
+# مكتبة للتعامل مع البيانات الضخمة (Big Data)
+pandas
+
